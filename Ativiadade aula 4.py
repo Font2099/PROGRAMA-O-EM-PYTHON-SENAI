@@ -17,7 +17,8 @@ print()
 n1 = int(input('Digite um número inteiro:'))
 n2 = int(input('Digite um segundo número inteiro:'))
 
-print(n1, n2)
+print(str(n1))
+print(str(n2))
 
 print()
 
