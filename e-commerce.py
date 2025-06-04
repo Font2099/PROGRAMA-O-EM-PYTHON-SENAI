@@ -1,33 +1,28 @@
-ecommerce = {
-    
-    'livros' :{
-        
-        'a' : 50.0,
-        'b': 70.0,
-        'c' : 100.0,
-        
-        },
-    
-    "eletronicos" : {
-        'tablets' : 3000,
-        'fone' : 150,
-        }
-    
-    
-    
-    
-}
+# e-commerce
 
-secao1 = input('Digite o seção 1 ')
-secao2 = input('Digite o seção 2 ')
+carrinho  = []
+m_valores = []
 
-produto1 = input('Digite o produto 1 ')
-produto2= input('Digite o produto 2 ')
+comprar =  input('Deseja fazer pedido?: s/n ')
 
-
-carrinho = [produto1, produto2]
-valores = [ecommerce[secao1][produto1], ecommerce[secao2][produto2]]
-soma = sum(valores)
-
-print(carrinho)
-print('R$', soma)
+produtos = ['','Mouse','Fone','Celular']
+valor = ['',100.0,200.0,800.0]
+while comprar == 's' or comprar == 'S' or comprar == 'sim':
+    meu_prod = int(input(f'''
+    Digite o ID 1 Mouse R${valor[1]}
+    Digite o ID 2 Fone R${valor[2]}
+    Digite o ID 3 Celular R${valor[3]}
+    '''))
+    carrinho.append(produtos[meu_prod])
+    m_valores.append(valor[meu_prod])
+    print('seus produtos', carrinho)
+    soma = sum(m_valores)
+    print('R$', soma)
+    comprar =  input('Deseja continuar?: s/n ')
+else:
+    
+    print('---'*10)
+    print('R$', soma )
+    print('Obrigada volte sempre')
+    
+    
